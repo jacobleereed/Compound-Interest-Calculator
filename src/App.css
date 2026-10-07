@@ -1,0 +1,221 @@
+/* App.css */
+body {
+    color: white;
+    background-color: #303036;
+    background-image: linear-gradient(
+  40deg,
+  hsl(240deg 100% 11%) 0%,
+  hsl(224deg 100% 14%) 15%,
+  hsl(219deg 100% 16%) 26%,
+  hsl(215deg 100% 19%) 35%,
+  hsl(211deg 100% 21%) 43%,
+  hsl(208deg 100% 23%) 50%,
+  hsl(205deg 100% 25%) 56%,
+  hsl(203deg 100% 27%) 61%,
+  hsl(200deg 100% 29%) 66%,
+  hsl(198deg 100% 31%) 70%,
+  hsl(195deg 100% 32%) 74%,
+  hsl(192deg 100% 34%) 78%,
+  hsl(190deg 100% 35%) 82%,
+  hsl(187deg 100% 36%) 86%,
+  hsl(184deg 100% 37%) 89%,
+  hsl(181deg 100% 37%) 93%,
+  hsl(178deg 100% 39%) 96%,
+  hsl(175deg 84% 45%) 100%
+);
+    background-size: 100%;
+    min-height: 100vh;
+    font-family: Montserrat, arial, serif;
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* Base Calculator Container */
+.compoundCalculator {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1f2937;
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.compoundCalculator h2 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.compoundCalculator h3, 
+.compoundCalculator h4 {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  margin-top: 1.25rem;
+  font-weight: 600;
+}
+
+/* Inputs and Selects */
+.compoundCalculator input[type="number"],
+.compoundCalculator select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.compoundCalculator input[type="number"]:focus,
+.compoundCalculator select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  background-color: #ffffff;
+}
+
+/* Radio Buttons */
+.regularChanges label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: white;
+}
+
+.regularChanges input[type="radio"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #3b82f6;
+}
+
+/* Sub-section for Regular Rules */
+.regularRules {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  color: blue;
+}
+
+.regularRules h4:first-child {
+  margin-top: 0;
+}
+
+/* Calculate Button */
+.compoundCalculator button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.compoundCalculator button:hover {
+  background-color: #1d4ed8;
+}
+
+.compoundCalculator button:active {
+  transform: translateY(1px);
+}
+
+/* Results Section */
+.results {
+  margin-top: 2.5rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.topLineData h5 {
+  font-size: 1.5rem;
+  color: #047857; /* Success green for final money */
+  text-align: center;
+  background-color: #ecfdf5;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #a7f3d0;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 0.875rem 0.5rem;
+  text-align: right;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Left align the first column (Year) */
+th:first-child, td:first-child {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+td:last-child, th:last-child {
+  padding-right: 1rem;
+}
+
+th {
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+}
+
+tr:nth-child(even) td {
+  background-color: #f9fafb;
+}
+
+tr:hover td {
+  background-color: #f3f4f6;
+}
+
+#needaBeBlack {
+  color: black;
+}
+
+/* Animation for rendering results */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .compoundCalculator {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
